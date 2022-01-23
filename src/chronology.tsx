@@ -1,10 +1,14 @@
 import { VStack } from "@chakra-ui/react";
 import { VFC } from "react";
-import { data } from "./data";
 import { transformYears } from "./transformYears";
 import { YearWords } from "./yearWords";
+import { Data } from "./data";
 
-export const Chronology: VFC = () => {
+type Props = {
+  data: Data;
+};
+
+export const Chronology: VFC<Props> = ({ data }) => {
   const { list } = data;
   const years = transformYears(list);
 

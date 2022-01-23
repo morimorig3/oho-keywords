@@ -1,9 +1,13 @@
 import { VFC } from "react";
-import { data } from "./data";
 import { Container, Box, VStack, Heading, Text } from "@chakra-ui/react";
 import { getBirthDay } from "./utils";
+import { Data } from "./data";
 
-export const Header: VFC = () => {
+type Props = {
+  data: Data;
+};
+
+export const Header: VFC<Props> = ({ data }) => {
   const { user } = data;
   const userName = `${user.lastName} ${user.fitstName}`;
   const birthDay = getBirthDay(user.birthday);

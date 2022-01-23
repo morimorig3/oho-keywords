@@ -1,4 +1,4 @@
-type Data = {
+export type Data = {
   user: User;
   list: Keywords[];
 };
@@ -16,5 +16,3 @@ type User = {
   lastName: string;
   birthday: string;
 };
-
-export const data: Data = require("./keywords.json");
