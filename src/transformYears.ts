@@ -22,6 +22,9 @@ export const transformYears = (list: Keywords[]) => {
       ret[idx].list.push({ ...val, id: uuidv4() });
     }
 
+    // 年の昇順でソート
+    ret.sort((a, b) => (a.year > b.year ? 1 : -1));
+
     return ret;
   }, []);
 

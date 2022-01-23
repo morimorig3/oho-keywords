@@ -7,6 +7,7 @@ export type Keywords = {
   year: number;
   keywords: string;
   weight: number;
+  note: string;
   id?: string;
 };
 

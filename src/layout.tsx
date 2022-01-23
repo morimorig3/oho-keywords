@@ -8,9 +8,9 @@ type Props = {
 };
 
 export const Layout: VFC<Props> = ({ children }) => (
-  <VStack minH="100vh" bg="gray.100">
+  <VStack minH="100vh" bg="gray.50" spacing={0}>
     <Header />
-    <Box w="full" flex="1">
+    <Box as="main" w="full" flex="1">
       {children}
     </Box>
     <Footer />

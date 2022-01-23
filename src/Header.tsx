@@ -8,9 +8,9 @@ export const Header: VFC = () => {
   const userName = `${user.lastName} ${user.fitstName}`;
   const birthDay = getBirthDay(user.birthday);
   return (
-    <Box py={4}>
+    <Box as="header" py={4}>
       <Container>
-        <VStack as="header" spacing={0}>
+        <VStack spacing={0}>
           <Heading fontSize="xl" as="h1">
             {userName}のキーワード101
           </Heading>
